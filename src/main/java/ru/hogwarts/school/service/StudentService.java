@@ -41,8 +41,8 @@ public class StudentService {
         return studentRepository.findByAgeBetween(min, max);
     }
 
-    public Faculty getStudentsFaculty(String name) {
+    public String getStudentsFaculty(String name) {
 
-        return studentRepository.findByNameContainingIgnoreCase(name);
+        return studentRepository.findByNameContainingIgnoreCase(name).getFaculty().getName();
     }
 }
